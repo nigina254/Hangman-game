@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 import time
+import requests
 
 root = Tk()
 root.geometry("800x800")
@@ -10,8 +11,7 @@ refresh_sec = 0.01
 welcome_message = Label(root, text='Welcome to Hangman game', font='Courier 20 bold')
 welcome_message.pack()
 
-wordlist = ['winter', 'football', 'laptop', 'ration', 'human', 'spring', 'music', 'secret', 'galaxy', 'monster',
-            'snake', 'green', 'apple']
+wordlist = requests.get("https://random-word-api.herokuapp.com/all").json()
 
 def StartButton():
     start_button.pack_forget()  
