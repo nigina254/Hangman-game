@@ -3,6 +3,7 @@ Classical hangman game using Tkinter and Python
 
 
 #HOW TO PLAY
+
 After running code you will be directed into a game window, there click the button "Click to start the game" 
 
 The server will select a random word from "random word API"
